@@ -1,10 +1,12 @@
 package com.hema.sprinthub.security;
 import io.jsonwebtoken.Jwts;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import io.jsonwebtoken.security.Keys;
 @Component
 public class JwtUtil {
-	private final String SECRET_KEY = "mySecretKeyForSprintHubJwt123456789";
+	@Value("${jwt.secret}")
+	private String SECRET_KEY;
 	public String generateToken(String email, String role) {
 
 	    return Jwts.builder()
