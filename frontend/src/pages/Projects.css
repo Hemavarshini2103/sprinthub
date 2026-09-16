@@ -1,0 +1,57 @@
+.page {
+    min-height: 100vh;
+    padding: 10px 0;
+}
+
+.page-header {
+    margin-bottom: 28px;
+}
+
+.page-header h1 {
+    margin: 0;
+    font-size: 28px;
+    color: #1e293b;
+}
+
+.page-header p {
+    margin: 7px 0 0;
+    color: #64748b;
+    font-size: 14px;
+}
+
+.project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.project-card {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 22px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.project-card h2 {
+    margin: 0 0 8px;
+    font-size: 17px;
+    color: #1e293b;
+}
+
+.project-card p {
+    margin: 0;
+    color: #64748b;
+    font-size: 14px;
+}
+
+.project-status {
+    padding: 6px 12px;
+    border-radius: 20px;
+    background: #dcfce7;
+    color: #15803d;
+    font-size: 11px;
+    font-weight: 700;
+}

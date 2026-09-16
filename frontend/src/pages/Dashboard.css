@@ -1,0 +1,282 @@
+.dashboard {
+    min-height: 100vh;
+    display: flex;
+    background: #f4f7fb;
+    color: #1e293b;
+}
+
+/* Sidebar */
+
+.sidebar {
+    width: 240px;
+    min-height: 100vh;
+    background: #ffffff;
+    border-right: 1px solid #e2e8f0;
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 10px 30px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #2563eb;
+}
+
+.sidebar-logo-mark {
+    width: 36px;
+    height: 36px;
+    border-radius: 9px;
+    background: #2563eb;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.nav-item {
+    width: 100%;
+    padding: 12px 14px;
+    border: none;
+    border-radius: 8px;
+    background: transparent;
+    text-align: left;
+    font-size: 14px;
+    color: #64748b;
+    cursor: pointer;
+}
+
+.nav-item:hover {
+    background: #eff6ff;
+    color: #2563eb;
+}
+
+.nav-item.active {
+    background: #eff6ff;
+    color: #2563eb;
+    font-weight: 600;
+}
+
+.logout-button {
+    margin-top: auto;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #fef2f2;
+    color: #dc2626;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.logout-button:hover {
+    background: #fee2e2;
+}
+
+/* Main Content */
+
+.main-content {
+    flex: 1;
+    padding: 32px 40px;
+}
+
+/* Header */
+
+.dashboard-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 32px;
+}
+
+.dashboard-header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.dashboard-header p {
+    margin: 7px 0 0;
+    color: #64748b;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.profile-avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #dbeafe;
+    color: #2563eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Statistics */
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-bottom: 32px;
+}
+
+.stat-card {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 22px;
+}
+
+.stat-label {
+    display: block;
+    color: #64748b;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.stat-card strong {
+    font-size: 28px;
+    color: #1e293b;
+}
+
+/* Tasks */
+
+.tasks-section {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 24px;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.section-header h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.section-header p {
+    margin: 6px 0 0;
+    color: #64748b;
+    font-size: 14px;
+}
+
+.view-all-button {
+    border: none;
+    background: transparent;
+    color: #2563eb;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.task-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+}
+
+.task-card h3 {
+    margin: 0 0 6px;
+    font-size: 15px;
+}
+
+.task-card p {
+    margin: 0;
+    color: #64748b;
+    font-size: 13px;
+}
+
+.status {
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.status.in-progress {
+    background: #fef3c7;
+    color: #b45309;
+}
+
+.status.todo {
+    background: #f1f5f9;
+    color: #475569;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    .sidebar {
+        width: 190px;
+    }
+
+    .main-content {
+        padding: 24px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .sidebar {
+        display: none;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+
+    .dashboard-header {
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .profile {
+        display: none;
+    }
+
+}
