@@ -155,9 +155,19 @@ return (
                 <p>{task.description}</p>
             </div>
 
-            <span className={`status ${task.status === "IN_PROGRESS" ? "in-progress" : "todo"}`}>
-                {task.status === "IN_PROGRESS" ? "In Progress" : "To Do"}
-            </span>
+            <span className={`status ${
+    task.status === "IN_PROGRESS"
+        ? "in-progress"
+        : task.status === "COMPLETED"
+        ? "completed"
+        : "todo"
+}`}>
+    {task.status === "IN_PROGRESS"
+        ? "In Progress"
+        : task.status === "COMPLETED"
+        ? "Completed"
+        : "To Do"}
+</span>
 
         </div>
     ))}
